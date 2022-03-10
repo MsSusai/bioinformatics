@@ -4,3 +4,6 @@
 # 时间：2022/3/10  15:19 
 # 名称：test.PY
 # 工具：PyCharm
+import Bio
+
+print(Bio.__version__)
