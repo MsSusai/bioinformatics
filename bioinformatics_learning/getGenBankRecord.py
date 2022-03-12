@@ -8,9 +8,10 @@ from Bio import Entrez
 from Bio import SeqIO
 
 Entrez.email = "liuhaorantony@163.com"
-handle = Entrez.efetch(db='nucleotide', id='AY286474', rettype='fasta')  # rettype='gb'
-# print(handle.read())
-seqRecord = SeqIO.read(handle, format='fasta')
-with open('datasets/AY286474.fasta', 'w+') as f:
-    f.write(seqRecord.format('fasta'))
-handle.close()
+handle = Entrez.efetch(db='nucleotide', id='AY286474', rettype='fasta').read()  # rettype='gb'
+with open('datasets/test.fasta', 'w+') as f:
+    f.write(handle)
+# seqRecord = SeqIO.read(handle, format='fasta')
+# with open('datasets/AY286474.fasta', 'w+') as f:
+#     f.write(seqRecord.format('fasta'))
+# handle.close()
