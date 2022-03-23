@@ -2,7 +2,7 @@
 
 # 作者：Sosai
 # 时间：2022/3/16  9:46 
-# 名称：test.R
+# 名称：FirstClass.R
 # 工具：PyCharm
 # x <- c(0:10, 50)
 # xmean <- mean(x)
