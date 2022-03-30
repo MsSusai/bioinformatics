@@ -7,8 +7,8 @@
 from Bio import pairwise2
 from Bio import SeqIO
 
-seq1 = SeqIO.read(open(r"C:\Users\sosai\Desktop\ZFP182 orthologue\sequence (3).txt"), 'fasta')
-seq2 = SeqIO.read(open(r"datasets\AY286474.fasta"), 'fasta')
+seq1 = SeqIO.read(open(r"datasets/ZFP182_orthologue/sequence (3).txt"), 'fasta')
+seq2 = SeqIO.read(open(r"datasets/AY286474.fasta"), 'fasta')
 # print(seq2)
 # print("-----------------")
 # print(seq1)
