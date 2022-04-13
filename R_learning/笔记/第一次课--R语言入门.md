@@ -34,16 +34,20 @@ python处理序列效果很好，R处理数组和矩阵效果较好
 ### R的使用
 
 library()：引用包  
-<-：赋值  
+<-：赋值
 
-####帮助文件：
-![img.png](img.png)  
-####对象：
+#### 帮助文件：
+
+![img.png](img.png)
+
+#### 对象：
+
 ![img_1.png](img_1.png)  
 ![img_2.png](img_2.png)  
 ![img_3.png](img_3.png)
 
-####rbind与cbind：
+#### rbind与cbind：
+
 ```r
 x1 <- c(2, 4, 6, 8, 0)
 x2 <- c(1, 3, 5, 7, 9)
@@ -55,9 +59,12 @@ print(bind2)
 q()
 ```
 
-####rbind效果：
-![img_4.png](img_4.png)  
-####cbind效果：
-![img_5.png](img_5.png)  
+#### rbind效果：
+
+![img_4.png](img_4.png)
+
+#### cbind效果：
+
+![img_5.png](img_5.png)
 
 <u>**R语言向量起始数字是1不是0**</u>
