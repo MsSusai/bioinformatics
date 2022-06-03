@@ -9,12 +9,24 @@
 from Bio import SeqIO
 import re
 
+kozak: int = 0
+gene: int = 0
+
 for seq in SeqIO.parse(r"E:\资料\计算机\生物信息学\Arabidopsis thaliana\GCF_000001735.4_TAIR10.1_rna.fna", "fasta"):
-	find = re.findall("[AG]..ATGG", str(seq.seq))
-	print(seq.id, len(find))
+	gene += 1
+	index = str(seq.seq).find('ATG')
+	# print(str(seq.seq)[index - 3:index + 4])
+	find = re.match("[AG]..ATGG", str(seq.seq)[index - 3:index + 4])
+	if find is not None:
+		kozak += 1
+		print(f"{kozak}/{gene}  kozak find!")
+print(f"Total kozak are {kozak}, genes are {gene}")
 
 '''
 运行结果
-
-
+.........
+9934/53799  kozak find!
+9935/53804  kozak find!
+9936/53825  kozak find!
+Total kozak are 9936, genes are 53827
 '''
