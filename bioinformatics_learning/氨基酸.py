@@ -103,3 +103,24 @@ if __name__ == '__main__':
 	# print(animo3.calculate())
 	# animo4 = Animo('LeuTRPThrLeHis')
 	# print(animo4.calculate())
+	
+	
+'''
+运行结果：
+
+DLWTERRLHP
+酸性氨基酸占比0.2，碱性氨基酸占比0.3
+多肽有10个氨基酸组成，相对分子量为1118
+
+ArgLysAspGluGluGluArgArgLysLysAspAspLeuTrpThrLeuHisPro
+酸性氨基酸占比0.3333333333333333，碱性氨基酸占比0.3888888888888889
+多肽有18个氨基酸组成，相对分子量为1998
+
+Traceback (most recent call last):
+  File "E:/Code/bioinformatics/bioinformatics_learning/氨基酸.py", line 103, in <module>
+    print(animo3.calculate())
+  File "E:/Code/bioinformatics/bioinformatics_learning/氨基酸.py", line 90, in calculate
+    raise "请检查氨基酸输入是否正确！"
+TypeError: exceptions must derive from BaseException
+
+'''
