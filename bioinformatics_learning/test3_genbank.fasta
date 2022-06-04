@@ -1,0 +1,212 @@
+LOCUS       NM_213806                849 bp    mRNA    linear   MAM 24-SEP-2019
+DEFINITION  Sus scrofa Fas ligand (TNF superfamily, member 6) (FASLG), mRNA.
+ACCESSION   NM_213806
+VERSION     NM_213806.1
+KEYWORDS    RefSeq.
+SOURCE      Sus scrofa (pig)
+  ORGANISM  Sus scrofa
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Laurasiatheria; Cetartiodactyla; Suina; Suidae;
+            Sus.
+REFERENCE   1  (bases 1 to 849)
+  AUTHORS   Lin F, Fu YH, Han J, Shen M, Du CW, Li R, Ma XS and Liu HL.
+  TITLE     Changes in the expression of Fox O1 and death ligand genes during
+            follicular atresia in porcine ovary
+  JOURNAL   Genet. Mol. Res. 13 (3), 6638-6645 (2014)
+   PUBMED   25177944
+  REMARK    GeneRIF: Data suggest forkhead box protein O1 (FoxO1) involvement
+            in the regulation of TNF-related apoptosis-inducing ligand TRAIL
+            and Fas ligand FasL expression during follicular atresia.
+            Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 849)
+  AUTHORS   Xie GH, Wang SJ, Wang Y, Zhang Y, Zhang HZ, Jin S, Wang QF, Liu ZC
+            and Ge HL.
+  TITLE     Fas Ligand gene transfer enhances the survival of tissue-engineered
+            chondrocyte allografts in mini-pigs
+  JOURNAL   Transpl. Immunol. 19 (2), 145-151 (2008)
+   PUBMED   18503890
+  REMARK    GeneRIF: the result indicates that the expression of FasL by
+            chondrocytes is capable of inducing apoptosis of activated T cells
+REFERENCE   3  (bases 1 to 849)
+  AUTHORS   Chang HW, Jeng CR, Lin CM, Liu JJ, Chang CC, Tsai YC, Chia MY and
+            Pang VF.
+  TITLE     The involvement of Fas/FasL interaction in porcine circovirus type
+            2 and porcine reproductive and respiratory syndrome virus
+            co-inoculation-associated lymphocyte apoptosis in vitro
+  JOURNAL   Vet. Microbiol. 122 (1-2), 72-82 (2007)
+   PUBMED   17321702
+  REMARK    GeneRIF: The expression of FAS and FAS ligand in splenic
+            macrophages co-infected with porcine circovirus 2 and porcine
+            reproductive and respiratory syndrome virus is reported
+REFERENCE   4  (bases 1 to 849)
+  AUTHORS   Tayade C, Black GP, Fang Y and Croy BA.
+  TITLE     Differential gene expression in endometrium, endometrial
+            lymphocytes, and trophoblasts during successful and abortive embryo
+            implantation
+  JOURNAL   J. Immunol. 176 (1), 148-156 (2006)
+   PUBMED   16365405
+REFERENCE   5  (bases 1 to 849)
+  AUTHORS   Bai L, Maedler K, Donath M and Tuch BE.
+  TITLE     Expression of Fas but not Fas ligand on fetal pig beta cells
+  JOURNAL   Xenotransplantation 11 (5), 426-435 (2004)
+   PUBMED   15303979
+  REMARK    GeneRIF: FasL was not detected on fetal pig pancreatic cells but
+            could be induced on both beta and non-beta cells when the cells
+            were treated with IL1beta.
+            Erratum:[Xenotransplantation. 2016 Mar;23(2):171-2. PMID: 27106874]
+REFERENCE   6  (bases 1 to 849)
+  AUTHORS   Tsuyuki S, Kono M and Bloom ET.
+  TITLE     Cloning and potential utility of porcine Fas ligand: overexpression
+            in porcine endothelial cells protects them from attack by human
+            cytolytic cells
+  JOURNAL   Xenotransplantation 9 (6), 410-421 (2002)
+   PUBMED   12371937
+REFERENCE   7  (bases 1 to 849)
+  AUTHORS   Motegi-Ishiyama Y, Nakajima Y, Hoka S and Takagaki Y.
+  TITLE     Porcine Fas-ligand gene: genomic sequence analysis and comparison
+            with human gene
+  JOURNAL   Mol. Immunol. 38 (8), 581-586 (2002)
+   PUBMED   11792426
+REFERENCE   8  (bases 1 to 849)
+  AUTHORS   Muneta Y, Shimoji Y, Inumaru S and Mori Y.
+  TITLE     Molecular cloning, characterization, and expression of porcine Fas
+            ligand (CD95 ligand)
+  JOURNAL   J. Interferon Cytokine Res. 21 (5), 305-312 (2001)
+   PUBMED   11429161
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence was derived from AB027297.1.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: AB027297.1, AF397407.1 [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           SAMN01893940, SAMN01915393
+                                           [ECO:0000348]
+            ##Evidence-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..849
+                     /organism="Sus scrofa"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9823"
+                     /chromosome="9"
+                     /map="9"
+     gene            1..849
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /note="Fas ligand (TNF superfamily, member 6)"
+                     /db_xref="GeneID:396726"
+     CDS             1..849
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /note="CD95 ligand; tumor necrosis factor (ligand)
+                     superfamily, member 6; fas antigen ligand"
+                     /codon_start=1
+                     /product="tumor necrosis factor ligand superfamily member
+                     6"
+                     /protein_id="NP_998971.1"
+                     /db_xref="GeneID:396726"
+                     /translation="MQQPFNYPYPQIFWVDSSATSPWASPGSVFPCPASVPGRPGQRR
+                     PPPPPPPPPPPPTLLPSRPLPPLPPPSLKKKRDHNAGLCLLVMFFMVLVALVGLGLGM
+                     FQLFHLQKELTELRESASQRHTESSLEKQIGHPNLPSEKKELRKVAHLTGKPNSRSIP
+                     LEWEDTYGIALVSGVKYMKGSLVINDTGLYFVYSKVYFRGQYCNNQPLSHKVYTRNSR
+                     YPQDLVLMEGKMMNYCTTGQMWARSSYLGAVFNLTSADHLYVNVSELSLVNFEESKTF
+                     FGLYKL"
+     mat_peptide     1..390
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /product="ADAM10-processed FasL form. {ECO:0000250}"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BEA8.1)"
+     mat_peptide     1..249
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /product="FasL intracellular domain. {ECO:0000250}"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BEA8.1)"
+     misc_feature    244..249
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Cleavage, by SPPL2A. {ECO:0000250}; propagated from
+                     UniProtKB/Swiss-Prot (Q9BEA8.1); cleavage site"
+     misc_feature    247..309
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BEA8.1);
+                     transmembrane region"
+     misc_feature    388..393
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Cleavage, by ADAM10. {ECO:0000250}; propagated from
+                     UniProtKB/Swiss-Prot (Q9BEA8.1); cleavage site"
+     mat_peptide     391..846
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /product="Tumor necrosis factor ligand superfamily member
+                     6, soluble form. {ECO:0000250}"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BEA8.1)"
+     misc_feature    553..555
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="N-linked (GlcNAc...) asparagine. {ECO:0000255};
+                     propagated from UniProtKB/Swiss-Prot (Q9BEA8.1);
+                     glycosylation site"
+     misc_feature    751..753
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="N-linked (GlcNAc...) asparagine. {ECO:0000255};
+                     propagated from UniProtKB/Swiss-Prot (Q9BEA8.1);
+                     glycosylation site"
+     misc_feature    781..783
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="N-linked (GlcNAc...) asparagine. {ECO:0000255};
+                     propagated from UniProtKB/Swiss-Prot (Q9BEA8.1);
+                     glycosylation site"
+     exon            1..351
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /inference="alignment:Splign:2.1.0"
+     exon            352..397
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /inference="alignment:Splign:2.1.0"
+     exon            398..454
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /inference="alignment:Splign:2.1.0"
+     exon            455..849
+                     /gene="FASLG"
+                     /gene_synonym="CD95-L; FASL; TNFSF6"
+                     /inference="alignment:Splign:2.1.0"
+ORIGIN      
+        1 atgcagcagc ccttcaatta cccatacccc caaatcttct gggtggacag cagtgctacc
+       61 tctccctggg cctccccagg ctcagtcttc ccctgtccag cttctgtgcc aggaaggcca
+      121 gggcaaagga ggccaccacc accaccgccg ccaccgccac caccaccaac actcctgcca
+      181 tcaagaccgc tgcctccact gccaccgcca tctctgaaga agaagaggga ccacaatgca
+      241 ggcctgtgtc tccttgtgat gttcttcatg gttctggtgg ccctggttgg attggggctg
+      301 gggatgtttc agctcttcca cctacagaag gagctgactg aactcagaga gtctgccagc
+      361 caaaggcata cagaatcatc tttggagaag caaataggtc accccaatct accctctgag
+      421 aaaaaggagc tgagaaaagt ggcccactta acaggcaagc ctaactcaag atccatccct
+      481 ctggaatggg aagacaccta tggaattgcc ttggtctctg gggtgaagta tatgaagggc
+      541 agccttgtga tcaatgacac tgggctgtat tttgtgtatt ccaaagtgta cttccggggt
+      601 cagtactgca acaaccagcc cctgagtcac aaggtataca caaggaactc taggtatccc
+      661 caggacctgg tgctgatgga gggaaagatg atgaactatt gcactactgg ccaaatgtgg
+      721 gcccgcagca gctacctggg ggctgtgttc aatctcacca gcgctgacca tttatatgtc
+      781 aacgtatctg agctctctct ggtcaatttt gaggaatcta agacattttt tggcttatat
+      841 aagctctga
+//

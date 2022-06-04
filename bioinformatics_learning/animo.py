@@ -117,9 +117,9 @@ ArgLysAspGluGluGluArgArgLysLysAspAspLeuTrpThrLeuHisPro
 多肽有18个氨基酸组成，相对分子量为1998
 
 Traceback (most recent call last):
-  File "E:/Code/bioinformatics/bioinformatics_learning/氨基酸.py", line 103, in <module>
+  File "E:/Code/bioinformatics/bioinformatics_learning/animo.py", line 103, in <module>
     print(animo3.calculate())
-  File "E:/Code/bioinformatics/bioinformatics_learning/氨基酸.py", line 90, in calculate
+  File "E:/Code/bioinformatics/bioinformatics_learning/animo.py", line 90, in calculate
     raise "请检查氨基酸输入是否正确！"
 TypeError: exceptions must derive from BaseException
 
