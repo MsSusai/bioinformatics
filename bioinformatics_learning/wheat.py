@@ -5,7 +5,6 @@
 # 名称：wheat.PY
 # 工具：PyCharm
 import pandas as pd
-from scipy import stats
 
 wheat = pd.read_csv(r"wheat.CSV", encoding="GBK")
 # print(wheat)
@@ -13,13 +12,13 @@ data = []
 datalist = []
 
 for i in range(0, 600, 6):
-	data.append(wheat["height"][i:i + 3])
+	data.append(wheat["level"][i:i + 6])
 # print(wheat.describe())
 
 for j in data:
 	datalist.append(j.values)
 col = [i for i in range(100)]
-row = ["one", "two", "three"]
+row = ["one", "two", "three", "four", "five", "six"]
 frame = pd.DataFrame(data=datalist, columns=row, index=col)
 
-print(frame)
+frame.to_csv("level.csv")

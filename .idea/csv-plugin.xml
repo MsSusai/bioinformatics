@@ -59,7 +59,42 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\bioinformatics_learning\count.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\bioinformatics_learning\datasets\SRR_diff_4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\bioinformatics_learning\height.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\bioinformatics_learning\length.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\bioinformatics_learning\level.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\bioinformatics_learning\wheat.CSV">
           <value>
             <Attribute>
               <option name="separator" value="," />
