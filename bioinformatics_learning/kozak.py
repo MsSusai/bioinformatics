@@ -16,17 +16,19 @@ for seq in SeqIO.parse(r"E:\资料\计算机\生物信息学\Arabidopsis thalian
 	gene += 1
 	index = str(seq.seq).find('ATG')
 	# print(str(seq.seq)[index - 3:index + 4])
-	find = re.match("[AG]..ATGG", str(seq.seq)[index - 3:index + 4])
+	find = re.match("[AT]..ATGG", str(seq.seq)[index - 3:index + 4])
 	if find is not None:
 		kozak += 1
-		print(f"{kozak}/{gene}  kozak find!")
+		print(f">{seq.id}  {kozak}/{gene}  kozak find!  "
+		      f"index is {index - 3}-{index + 4}  kozak seq is {find.string}")
 print(f"Total kozak are {kozak}, genes are {gene}")
 
 '''
 运行结果
 .........
-9934/53799  kozak find!
-9935/53804  kozak find!
-9936/53825  kozak find!
-Total kozak are 9936, genes are 53827
+>NR_144274.1  10131/53809  kozak find!  index is 102-109  kozak seq is TTCATGG
+>NR_144280.1  10132/53815  kozak find!  index is 164-171  kozak seq is TTTATGG
+>NR_144284.1  10133/53819  kozak find!  index is 48-55  kozak seq is TTGATGG
+>NR_144291.1  10134/53826  kozak find!  index is 35-42  kozak seq is TCGATGG
+Total kozak are 10134, genes are 53827
 '''

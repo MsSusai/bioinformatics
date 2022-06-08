@@ -8,8 +8,10 @@ import re
 
 
 class Animo:
-	def __init__(self, seq: str):
+	def __init__(self, seq: str, name: str = None, species: str = None):
 		self.seq = seq
+		self.name = name
+		self.species = species
 		# self.animo = {
 		# 	'Gly': 'G', 'Ala': 'A', 'Val': 'V',
 		# 	'Leu': 'L', 'Ile': 'I', 'Phe': 'F',
@@ -65,7 +67,7 @@ class Animo:
 			raise "请检查氨基酸输入是否正确！格式为：‘LeuTrpThrLeuHis’"
 		return ''.join(single)
 	
-	def percent(self) -> str:
+	def percent(self) -> str:  # 计算酸碱氨基酸所占比例
 		alk: int = 0
 		acid: int = 0
 		if self.is_animo():
@@ -80,7 +82,7 @@ class Animo:
 		else:
 			raise "请检查氨基酸输入是否正确！"
 	
-	def calculate(self) -> str:
+	def calculate(self) -> str:  # 序列长度和相对分子量计算
 		if self.is_animo():
 			if self.seq.isupper() is False:  # 转换三个字母为一个字母
 				self.seq = self.three_to_one()
@@ -103,8 +105,8 @@ if __name__ == '__main__':
 	# print(animo3.calculate())
 	# animo4 = Animo('LeuTRPThrLeHis')
 	# print(animo4.calculate())
-	
-	
+	...
+
 '''
 运行结果：
 
