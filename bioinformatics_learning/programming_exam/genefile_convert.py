@@ -5,6 +5,7 @@
 # 名称：基因文件格式转换.PY
 # 工具：PyCharm
 import sys
+from Bio import SeqIO
 
 
 class FileConvert:
@@ -56,6 +57,13 @@ class FileConvert:
 						i += 1
 		output_file.close()
 	
+	def fasta_to_seq(self):
+		output_file = open(self.output_path, "w")
+		print("正在将fasta文件转换为纯序列文件...")
+		for seq in SeqIO.parse(self.file_path, 'fasta'):
+			output_file.write(str(seq.seq) + '\n')
+		output_file.close()
+	
 	def geo_to_fasta(self):
 		i: int = 0  # 为了跳过geo文件的前四行注释
 		j: int = 1  # 对序列进行编号
@@ -83,26 +91,56 @@ class FileConvert:
 					i += 1
 		output_file.close()
 	
+	def fasta_to_geo(self):
+		seq_dict: dict = {}
+		output_file = open(self.output_path, "w")
+		print("正在将fasta文件转换为geo文件...")
+		for seq in SeqIO.parse(self.file_path, 'fasta'):
+			seq_dict[seq.seq] = seq_dict.get(seq.seq, 0) + 1
+		output_file.write("SEQUENCE\tLENGTH\tCOUNT\n")
+		for k, v in seq_dict.items():
+			output_file.write(f"{str(k)}\t{len(k)}\t{v}\n")
+		output_file.close()
+	
+	def seq_to_geo(self):
+		seq_dict: dict = {}
+		output_file = open(self.output_path, "w")
+		with open(self.file_path, "r") as f:
+			print("正在将纯序列文件转换为geo文件...")
+			for seq in f:
+				seq_dict[seq] = seq_dict.get(seq, 0) + 1
+		output_file.write("SEQUENCE\tLENGTH\tCOUNT\n")
+		for k, v in seq_dict.items():
+			output_file.write(f"{k}\t{len(k)}\t{v}\n")
+		output_file.close()
+	
+	def geo_to_seq(self):
+		i: int = 0  # 为了跳过geo文件的前四行注释
+		output_file = open(self.output_path, 'w')
+		with open(self.file_path, 'r') as f:
+			print("正在将geo文件转换为纯序列文件...")
+			for line in f:
+				if i >= 4:
+					seq = line.split('\t')
+					sequence = seq[0]  # 核酸序列
+					count = int(seq[2])  # 序列读数
+					output_file.write(f"{sequence}\n" * count)
+				else:
+					i += 1
+		output_file.close()
+	
 	def genbank_to_fasta(self):
 		flag: bool = False
-		# 打开新建fasta文件准备写入
-		output_file = open(self.output_path, 'w')
-		# 打开gb文件，准备读取序列信息并写入fasta文件
-		with open(self.file_path, 'r') as f:
-			# 逐行扫描
+		output_file = open(self.output_path, 'w') # 打开新建fasta文件准备写入
+		with open(self.file_path, 'r') as f: # 打开gb文件，准备读取序列信息并写入fasta文件
 			for line in f:
-				# 如果是ACCESSION行，则写入fasta文件作为序列标题
-				if line[0:9] == 'ACCESSION':
+				if line[0:9] == 'ACCESSION': # 如果是ACCESSION行，则写入fasta文件作为序列标题
 					output_file.writelines('>' + line.split()[1] + '\n')
-				# 如果是ORIGIN行，代表是序列
-				elif line[0:6] == 'ORIGIN':
+				elif line[0:6] == 'ORIGIN': # 如果是ORIGIN行，代表是序列
 					flag = True
 				elif flag is True:
-					# 通过空格符（空格 换行 制表）对字符串进行切片
-					s = line.split()
-					# 非空切片字符打印
-					if s:
-						# print(s)
+					s = line.split() # 通过空格符（空格 换行 制表）对字符串进行切片
+					if s: # 非空切片字符打印
 						# 去掉列表首个元素（数字序号）后，连接所有元素即为完整序列按行写入fasta文件
 						seq = ''.join(s[1:])
 						output_file.writelines(seq.upper() + '\n')
@@ -128,10 +166,10 @@ class FileConvert:
 
 
 if __name__ == '__main__':
-	# test1_seq = FileConvert(21)
+	test1_seq = FileConvert()
 	# test2_geo = FileConvert()
 	# test3_genbank = FileConvert()
-	# test1_seq.seq_to_fasta(normalized=True)
+	test1_seq.geo_to_seq()
 	# test2_geo.geo_to_fasta()
 	# test3_genbank.genbank_to_fasta()
 	...
@@ -168,6 +206,16 @@ test1_seq.seq_to_fasta()
 >read_1@2
 TGACAGAAGAGAGTGAGCAC
 
+test1_seq = FileConvert()
+test1_seq.fasta_to_seq()
+运行结果：
+TCGCTTGGTGCAGATCGGGAC
+TGACAGAAGAGAGTGAGCAC
+TTGACAGAAGAGAGTGAGCAC
+TTGACAGAAGAGAGTGAGCAC
+TGACAGAAGAGAGTGAGCAC
+TGACAGAAGAGAGTGAGCAC
+
 
 test1_seq = FileConvert(21)
 test1_seq.seq_to_fasta(normalized=True)
@@ -177,6 +225,7 @@ TGACAGAAGAGAGTGAGCAC
 
 
 test2_geo = FileConvert()
+test2_geo.geo_to_fasta()
 运行结果：
 >read_1@178813
 TCGCTTGGTGCAGATCGGGAC
@@ -189,11 +238,31 @@ TGAAGCTGCCAGCATGATCTGA
 >read_5@7516
 TGAAGCTGCCAGCATGATCTA
 
+test1_seq = FileConvert()
+test1_seq.fasta_to_geo()
+运行结果：
+SEQUENCE	LENGTH	COUNT
+TCGCTTGGTGCAGATCGGGAC	21	1
+TGACAGAAGAGAGTGAGCAC	20	3
+TTGACAGAAGAGAGTGAGCAC	21	2
+
 
 test2_geo = FileConvert(21)
+test2_geo.geo_to_fasta()
 运行结果：
 >read_1@20166
 TGAAGCTGCCAGCATGATCTGA
+
+
+test1_seq = FileConvert()
+test1_seq.geo_to_seq()
+运行结果：
+TCGCTTGGTGCAGATCGGGAC
+TGACAGAAGAGAGTGAGCAC
+TGACAGAAGAGAGTGAGCAC
+TGACAGAAGAGAGTGAGCAC
+TTGACAGAAGAGAGTGAGCAC
+TTGACAGAAGAGAGTGAGCAC
 
 test3_genbank = FileConvert()
 运行结果：

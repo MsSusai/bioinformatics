@@ -99,10 +99,14 @@ class Animo:
 		for animo in self._animo_convert():
 			animo_dict[animo] = animo_dict.get(animo, 0) + 1
 		return animo_dict
+	
+	def __str__(self):
+		return f"名称：{self.name}  物种：{self.species}"
 
 
 if __name__ == '__main__':
-	animo1 = Animo('AspLeuTrpThrGluArgArgLeuHisPro')
+	animo1 = Animo('AspLeuTrpThrGluArgArgLeuHisPro', name='bZIP', species='human')
+	print(animo1)
 	print(animo1.is_animo())
 	print(animo1.three_to_one())
 	print(animo1.calculate_percent())
@@ -120,7 +124,8 @@ if __name__ == '__main__':
 	...
 
 '''
-animo1 = Animo('AspLeuTrpThrGluArgArgLeuHisPro')
+animo1 = Animo('AspLeuTrpThrGluArgArgLeuHisPro', name='bZIP', species='human')
+print(animo1)
 print(animo1.is_animo())
 print(animo1.three_to_one())
 print(animo1.calculate_percent())
@@ -129,6 +134,7 @@ print(animo1.calculate_num())
 print(animo1.calculate_Mr())
 
 运行结果：
+名称：bZIP  物种：human
 True
 DLWTERRLHP
 酸性氨基酸占比0.06666666666666667，碱性氨基酸占比0.1
